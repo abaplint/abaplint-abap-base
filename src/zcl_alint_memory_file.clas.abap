@@ -2,8 +2,8 @@
 CLASS zcl_alint_memory_file DEFINITION INHERITING FROM zcl_alint_abstract_file PUBLIC.
   PUBLIC SECTION.
     METHODS constructor IMPORTING filename TYPE string raw TYPE string.
-    METHODS getraw RETURNING VALUE(return) TYPE string.
-    METHODS getrawrows RETURNING VALUE(return) TYPE string_table.
+    METHODS getraw REDEFINITION.
+    METHODS getrawrows REDEFINITION.
   PRIVATE SECTION.
     DATA raw TYPE string.
 ENDCLASS.
